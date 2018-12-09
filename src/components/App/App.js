@@ -9,6 +9,7 @@ import Header from '../HeaderComponent/Header';
 import Review from '../ReviewComponent/Review';
 import Supported from '../SupportedComponent/Supported';
 import Understanding from '../UnderstandingComponent/Understanding';
+import Start from '../StartFeedback/StartComponent'
 
 
 class App extends Component {
@@ -16,18 +17,15 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Feedback!</h1>
-            <Feeling />
-            <Understanding />
-            <Supported />
-            <Comments />
-            <Review />
-            <Header />
-            <h4><i>Don't forget it!</i></h4>
-          </header>
-          <br />
+          <Header />
+          <Route exact path="/" component={Start} />
+          <Route exact path="/Feeling" component={Feeling} />
+          <Route exact path="/Understanding" component={Understanding} />
+          <Route exact path="/Supported" component={Supported} />
+          <Route exact path="/Comments" component={Comments} />
+          <Review />
         </div>
+
       </Router >
     );
   }
