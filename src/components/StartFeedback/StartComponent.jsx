@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 class Start extends Component {
@@ -13,6 +14,7 @@ class Start extends Component {
             <div>
                 <h1>Start</h1>
                 <button onClick={this.handleClick}></button>
+                
 
             </div>
 
@@ -20,4 +22,4 @@ class Start extends Component {
     }
 }
 
-export default withRouter(Start)
+export default withRouter(connect()(Start));

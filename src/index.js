@@ -8,16 +8,18 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 
-const selectPizzaReducer = (state = [], action) => {
-    switch (action.type) {
-        case 'ADD_PIZZA': return action.payload;
-        default: return state
+const buttonReducer = (state = 0, action) => {
+    if (action.type === 'BUTTON_CHECK') {
+        console.log('its working');
+        console.log('state', state);
+        return state + 1;
     }
+    return state;
 }
 
 const storeInstance = createStore(
     combineReducers({
-        selectPizzaReducer
+        buttonReducer
     }),
     applyMiddleware(logger)
 )

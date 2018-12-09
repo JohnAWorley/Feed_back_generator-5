@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import './App.css';
+import { connect } from 'react-redux';
 
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Comments from '../CommentsComponent/Comments'
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path="/Supported" component={Supported} />
           <Route exact path="/Comments" component={Comments} />
           <Review />
+          {/* <button onClick={() => this.props.dispatch({ type:'BUTTON_CHECK', payload: 'hey'})}>check</button> */}
         </div>
 
       </Router >
@@ -31,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
