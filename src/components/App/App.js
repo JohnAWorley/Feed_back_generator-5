@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
 
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import Comments from '../CommentsComponent/Comments'
 import Feeling from '../FeelingComponent/Feeling';
 import Header from '../HeaderComponent/Header';
