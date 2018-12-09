@@ -1,21 +1,47 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 class Feeling extends Component {
+
+    state = {
+        newElement: 0
+    }
+
     handleClick = () => {
-        this.props.history.push('/Understanding')
+        this.props.history.push('/Understanding');
+        this.props.dispatch({ type: 'ADD_FEELING', payload: this.state.newElement });
+
+    }
+
+    handleElementChange = (event) => {
+        console.log('changing', event.target.value);
+
+        this.setState({
+            newElement: event.target.value,
+        })
     }
     render() {
         return (
-       
-                <div>
-                    <h1>Feeling</h1>
-                    <button onClick={this.handleClick} />
-                <button onClick={() => this.props.dispatch({ type: 'BUTTON_CHECK', payload: 'hey' })}>check</button>
-                </div>
-            
+
+            <div>
+
+
+                <pre>{JSON.stringify(this.props.reduxState)}</pre>
+                <h1>Feeling</h1>
+                <select onChange={this.handleElementChange}>
+                    <option value=''></option>
+                    <option value={1}> 1</option>
+                    <option value={2}> 2</option>
+                    <option value={3}> 3</option>
+                    <option value={4}> 4</option>
+                    <option value={5}> 5</option>
+                </select>
+                <button onClick={this.handleClick}>Next Page</button>
+
+            </div>
+
         )
     }
 }

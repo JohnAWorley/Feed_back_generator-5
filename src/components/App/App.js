@@ -13,8 +13,12 @@ import Understanding from '../UnderstandingComponent/Understanding';
 import Start from '../StartFeedback/StartComponent'
 
 
+
 class App extends Component {
+  
   render() {
+   
+
     return (
       <Router>
         <div className="App">

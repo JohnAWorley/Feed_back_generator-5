@@ -8,13 +8,17 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 
-const buttonReducer = (state = 0, action) => {
-    if (action.type === 'BUTTON_CHECK') {
-        console.log('its working');
-        console.log('state', state);
-        return state + 1;
-    }
-    return state;
+const buttonReducer = (state = { feeling: 0, understanding: 0, supported: 0, comments: ''}, action) => {
+   switch (action.type) {
+       
+       case 'ADD_FEELING': return {...state, feeling: action.payload}
+       case 'ADD_UNDERSTANDING': return { ...state, understanding: action.payload}
+       case 'ADD_SUPPORTED': return { ...state, supported: action.payload}
+       case 'ADD_COMMENTS': return {...state, comments: action.payload}
+       default: return state;
+       
+   }
+   
 }
 
 const storeInstance = createStore(

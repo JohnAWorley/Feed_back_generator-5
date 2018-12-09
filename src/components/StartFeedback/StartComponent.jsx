@@ -3,6 +3,9 @@ import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 
 
+
+
+
 class Start extends Component {
     handleClick = () => {
         this.props.history.push('/Feeling')
@@ -13,7 +16,7 @@ class Start extends Component {
            
             <div>
                 <h1>Start</h1>
-                <button onClick={this.handleClick}></button>
+                <button onClick={this.handleClick}>NextPage</button>
                 
 
             </div>

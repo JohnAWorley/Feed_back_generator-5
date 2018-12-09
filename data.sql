@@ -9,9 +9,9 @@ CREATE TABLE "feedback" (
   "understanding" INT not null,
   "support" INT not null,
   "comments" text,
-  "flagged" boolean default false,
-  "date" date not null default CURRENT_DATE
-); 
+  "flagged" boolean default false, -- stretch mode
+  "date" date not null default CURRENT_DATE 
+);  
 
 -- Sample feedback item
 INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
