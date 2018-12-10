@@ -11,6 +11,7 @@ import Review from '../ReviewComponent/Review';
 import Supported from '../SupportedComponent/Supported';
 import Understanding from '../UnderstandingComponent/Understanding';
 import Start from '../StartFeedback/StartComponent'
+import Done from '../DoneComponent/Done';
 
 
 
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/Understanding" component={Understanding} />
           <Route exact path="/Supported" component={Supported} />
           <Route exact path="/Comments" component={Comments} />
+          <Route exact path="/Done" component={Done} />
           <Review />
           {/* <button onClick={() => this.props.dispatch({ type:'BUTTON_CHECK', payload: 'hey'})}>check</button> */}
         </div>

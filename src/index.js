@@ -15,6 +15,7 @@ const buttonReducer = (state = { feeling: 0, understanding: 0, supported: 0, com
        case 'ADD_UNDERSTANDING': return { ...state, understanding: action.payload}
        case 'ADD_SUPPORTED': return { ...state, supported: action.payload}
        case 'ADD_COMMENTS': return {...state, comments: action.payload}
+       case 'CLEAR': return { ...state, feeling: 0, understanding: 0, supported: 0, comments: ''}
        default: return state;
        
    }
