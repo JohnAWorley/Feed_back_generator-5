@@ -24,7 +24,7 @@ class Supported extends Component {
         return (
             <div>
                 <pre>{JSON.stringify(this.props.reduxState)}</pre>
-                <h1>Supported</h1>
+                <h1>Are you feeling supported by prime staff?</h1>
                 <select onChange={this.handleElementChange}>
                     <option value=''></option>
                     <option value={1}> 1</option>

@@ -27,7 +27,7 @@ class Understanding extends Component {
         return (
 
             <div>
-                <h1>Understanding</h1>
+                <h1>How well are you understanding the material?</h1>
                 <select onChange={this.handleElementChange}>
                     <option value=''></option>
                     <option value={1}> 1</option>

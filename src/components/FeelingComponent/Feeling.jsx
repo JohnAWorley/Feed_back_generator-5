@@ -29,7 +29,7 @@ class Feeling extends Component {
 
 
                 <pre>{JSON.stringify(this.props.reduxState)}</pre>
-                <h1>Feeling</h1>
+                <h1>How are you feeling today?</h1>
                 <select onChange={this.handleElementChange}>
                     <option value=''></option>
                     <option value={1}> 1</option>
